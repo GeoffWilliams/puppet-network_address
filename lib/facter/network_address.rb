@@ -7,7 +7,7 @@ Facter.add(:source_ipaddress) do
 
       # http://stackoverflow.com/a/5030118
       UDPSocket.open {|s| s.connect(target, 1); s.addr.last}
-    rescue e
+    rescue Exception => e
       "ERROR:  #{e.message}"
     end
   end
