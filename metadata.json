@@ -1,0 +1,15 @@
+{
+  "name": "geoffwilliams-source_ipaddress",
+  "version": "0.1.0",
+  "author": "geoffwilliams",
+  "summary": "A fact that finds the local IP address we need to use to reach a given computer in a network",
+  "license": "Apache-2.0",
+  "source": "https://github.com/GeoffWilliams/puppet-source_ipaddress",
+  "project_page": "https://github.com/GeoffWilliams/puppet-source_ipaddress",
+  "issues_url": "https://github.com/GeoffWilliams/puppet-source_ipaddress/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ],
+  "data_provider": null
+}
+
