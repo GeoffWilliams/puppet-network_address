@@ -15,7 +15,7 @@
 #
 # Copyright 2016 Puppet, Inc.
 #
-class network_address($target) {
+class source_ipaddress($target) {
   file { '/etc/target_ip':
     type    => file,
     owner   => 'root',
