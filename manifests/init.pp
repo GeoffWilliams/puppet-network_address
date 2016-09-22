@@ -17,7 +17,7 @@
 #
 class source_ipaddress($target) {
   file { '/etc/target_ip':
-    type    => file,
+    ensure  => file,
     owner   => 'root',
     group   => 'root',
     mode    => '0644',
