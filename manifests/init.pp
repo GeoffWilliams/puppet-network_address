@@ -15,12 +15,21 @@
 #
 # Copyright 2016 Puppet, Inc.
 #
-class source_ipaddress($target) {
-  file { '/etc/target_ip':
-    ensure  => file,
-    owner   => 'root',
-    group   => 'root',
-    mode    => '0644',
-    content => $target,
+define source_ipaddress($target) {
+  $path = '/etc/target_ip'
+  if ! defined(File[$path]) {
+    file { $path:
+      ensure  => file,
+      owner   => 'root',
+      group   => 'root',
+      mode    => '0644',
+      content => $target,
+    }
+  }
+
+  file_line { $target:
+    ensure  => present,
+    path    => $path,
+    line    => $target,
   }
 }
