@@ -15,7 +15,9 @@
 #
 # Copyright 2016 Puppet, Inc.
 #
-define source_ipaddress($target) {
+define source_ipaddress(
+    $target=$title
+) {
   $path = '/etc/target_ip'
   if ! defined(File[$path]) {
     file { $path:
