@@ -1,5 +1,5 @@
 require 'socket'
-require 'gem'
+require 'rubygems'
 Facter.add(:source_ipaddress) do
   setcode do
     # read the target network address
