@@ -18,7 +18,13 @@
 define source_ipaddress(
     $target=$title
 ) {
-  $path = '/etc/target_ip'
+
+  if $osfamily == 'windows' {
+    $path = 'c:\Users\Administrator\AppData\Roaming\target_ip'
+  } else {
+    $path = '/etc/target_ip'
+  }
+
   if ! defined(File[$path]) {
     file { $path:
       ensure  => file,
