@@ -20,7 +20,7 @@ define source_ipaddress(
 ) {
 
   if $osfamily == 'windows' {
-    $path = 'c:\Users\Administrator\AppData\Roaming\target_ip'
+    $path = 'c://Users//Administrator//AppData//Roaming//target_ip'
   } else {
     $path = '/etc/target_ip'
   }
