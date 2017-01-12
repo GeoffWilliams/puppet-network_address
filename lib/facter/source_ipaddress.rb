@@ -7,7 +7,7 @@ Facter.add(:source_ipaddress) do
 
     # read the list of IP address targets, distributed from your roles and
     # profiles via pluginsync
-    target_file = File.join(Puppet[:pluginfactdest], 'source_ipaddress_targets.txt')
+    target_file = File.join(Puppet[:factpath].split(':')[0], 'source_ipaddress_targets.txt')
     begin
       File.readlines(target_file).each do |line|
         begin
